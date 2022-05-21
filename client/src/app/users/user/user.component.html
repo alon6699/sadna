@@ -1,0 +1,10 @@
+<div class="normal-view">
+    <div>Name: {{user.name}}</div>
+    <div>Email: {{user.email}}</div>
+    <button class="edit-user-btn" data-user-id="${user.id}">
+        Edit
+    </button>
+    <button (click)="deleteUser()">
+        Delete
+    </button>
+</div>

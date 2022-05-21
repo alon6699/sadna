@@ -1,0 +1,12 @@
+<div class="users-column add-user-col">
+    <div class="column-header">Add User:</div>
+    <div>
+        <input id="name-input" placeholder="Name"  #userName>
+    </div>
+    <div>
+        <input id="email-input" placeholder="Email"  #userEmail >
+    </div>
+    <div>
+        <button id="add-user-btn" (click)="addUser(userName.value, userEmail.value)">Add</button>
+    </div>
+</div>
