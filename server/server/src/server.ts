@@ -1,12 +1,11 @@
 import { CustomError } from '@shared/errors';
+import cors from 'cors';
 import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors';
 import StatusCodes from 'http-status-codes';
 import logger from 'jet-logger';
 import morgan from 'morgan';
-import path from 'path';
 import apiRouter from './routes/api';
-import cors from 'cors'
 
 const app = express();
 app.use(cors({origin: "*"}));
