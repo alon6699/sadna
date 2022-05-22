@@ -1,7 +1,7 @@
 import StatusCodes from 'http-status-codes';
 import { Request, Response, Router } from 'express';
 
-import userService from 'src/controllers/user-service';
+import userService from '@services/user-controller';
 import { ParamMissingError } from '@shared/errors';
 
 const userRoute = Router();
