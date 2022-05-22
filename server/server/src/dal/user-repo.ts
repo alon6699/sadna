@@ -24,16 +24,6 @@ async function add(user: IUser): Promise<void> {
     return orm.saveDb(db);
 }
 
-async function update(user: IUser): Promise<void> {
-    const db = await orm.openDb();
-    for (let i = 0; i < db.users.length; i++) {
-        if (db.users[i].id === user.id) {
-            db.users[i] = user;
-            return orm.saveDb(db);
-        }
-    }
-}
-
 async function deleteOne(id: number): Promise<void> {
     const db = await orm.openDb();
     for (let i = 0; i < db.users.length; i++) {
@@ -49,6 +39,5 @@ export default {
     isExists,
     getAll,
     add,
-    update,
     delete: deleteOne,
 } as const;

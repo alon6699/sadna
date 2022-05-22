@@ -3,7 +3,9 @@
         <app-user-add></app-user-add>
     </div>
     <div>
-        <div>all users</div>
+        <mat-toolbar>
+            {{title}}
+         </mat-toolbar>
         <div *ngFor="let user of users | async">
             <app-user [user]="user" (delete)="deleteUser(user.id)"></app-user>
         </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { take } from 'rxjs/operators';
 import { UsersService } from '../services/users.service';
 
@@ -7,12 +7,9 @@ import { UsersService } from '../services/users.service';
   templateUrl: './user-add.component.html',
   styleUrls: ['./user-add.component.css']
 })
-export class UserAddComponent implements OnInit {
+export class UserAddComponent {
 
   constructor(private usersService: UsersService) { }
-
-  ngOnInit() {
-  }
 
   addUser(name: string, email: string) {
     this.usersService.addUser({ name, email }).pipe(take(1)).subscribe();

@@ -21,15 +21,6 @@ userRoute.post('/', async (req: Request, res: Response) => {
     return res.status(CREATED).end();
 });
 
-userRoute.put('/', async (req: Request, res: Response) => {
-    const { user } = req.body;
-    if (!user) {
-        throw new ParamMissingError();
-    }
-    await userService.updateOne(user);
-    return res.status(OK).end();
-});
-
 userRoute.delete('/:id', async (req: Request, res: Response) => {
     const { id } = req.params;
     if (!id) {

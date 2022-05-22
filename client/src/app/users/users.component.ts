@@ -10,6 +10,7 @@ import { UsersService } from '../services/users.service';
 })
 export class UsersComponent implements OnInit {
   users: Observable<User[]>;
+  title = "All users"
   constructor(private usersService: UsersService) { }
 
   ngOnInit() {
@@ -17,7 +18,6 @@ export class UsersComponent implements OnInit {
   }
 
   deleteUser(id: number) {
-    console.log('32')
     this.usersService.deleteUser(id).pipe(take(1)).subscribe();
   }
 }

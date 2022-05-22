@@ -1,10 +1,10 @@
-<div class="normal-view">
-    <div>Name: {{user.name}}</div>
-    <div>Email: {{user.email}}</div>
-    <button class="edit-user-btn" data-user-id="${user.id}">
-        Edit
-    </button>
-    <button (click)="deleteUser()">
-        Delete
-    </button>
-</div>
+<mat-card class="example-card">
+    <mat-card-title>{{user.name}}</mat-card-title>
+    <mat-card-content>
+      <div>Email: {{user.email}}</div>
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+        <button mat-raised-button color="accent" (click)="deleteUser()">Delete</button>
+    </mat-card-actions>
+</mat-card>
